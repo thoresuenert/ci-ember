@@ -5,7 +5,7 @@ MAINTAINER Thore Sünert <mail@thoresuenert.de>
 RUN \
 	npm install -g ember-cli@2.12.1 &&\
 	npm install -g bower@1.8.0 &&\
-	npm install -g phantomjs@2.1.7 &&\
+	npm install -g phantomjs-prebuilt &&\
   npm install -g node-sass@3.13.1
 
 RUN \
