@@ -1,20 +1,16 @@
 FROM node:6.10.0 
-MAINTAINER Dan Lynn <docker@danlynn.org>
-
-# ember server on port 4200
-# livereload server on port 49153 (changed in 2.11.1 from 49152)
-EXPOSE 4200 49153
-WORKDIR /myapp
-
-# run ember server on container start
-CMD ["ember", "server"]
+MAINTAINER Thore Sünert <mail@thoresuenert.de> 
 
 # Note: npm is v3.10.10
 RUN \
 	npm install -g ember-cli@2.12.1 &&\
 	npm install -g bower@1.8.0 &&\
-	npm install -g phantomjs@2.1.7
+	npm install -g phantomjs@2.1.7 &&\
+  npm install -g node-sass@3.13.1
 
+RUN \
+  apt-get update -y &&\
+  apt-get install openssh-client -y
 # install watchman
 # Note: See the README.md to find out how to increase the
 # fs.inotify.max_user_watches value so that watchman will 
