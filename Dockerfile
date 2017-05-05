@@ -7,10 +7,10 @@ RUN \
 
 # Note: npm is v3.10.10
 RUN \
-	npm install -g ember-cli@2.12.1 &&\
-	npm install -g bower &&\
-	npm install -g phantomjs-prebuilt &&\
-  npm install -g node-sass@3.13.1
+	yarn global add ember-cli@2.12.1 &&\
+	yarn global add bower &&\
+	yarn global add phantomjs-prebuilt &&\
+  yarn global add node-sass@3.13.1
 
 # install watchman
 # Note: See the README.md to find out how to increase the
