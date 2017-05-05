@@ -5,13 +5,10 @@ RUN \
   apt-get update -y &&\
   apt-get install openssh-client -y
 
-RUN \
-  apt-get install libfontconfig1-dev
-
 # Note: npm is v3.10.10
 RUN \
 	npm install -g ember-cli@2.12.1 &&\
-	npm install -g bower@1.8.0 &&\
+	npm install -g bower &&\
 	npm install -g phantomjs-prebuilt &&\
   npm install -g node-sass@3.13.1
 
